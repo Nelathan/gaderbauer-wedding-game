@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@layer base {
+    body {
+        @apply bg-gradient-to-br from-wedding-50 to-wedding-100 min-h-screen font-serif;
+    }
+}
+
+@layer components {
+    .card {
+        @apply bg-white rounded-lg shadow-lg p-6 border border-wedding-200;
+    }
+
+    .btn-primary {
+        @apply bg-wedding-500 hover:bg-wedding-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+    }
+
+    .input-field {
+        @apply w-full p-3 border-2 border-wedding-200 rounded-lg focus:border-wedding-500 focus:outline-none transition-colors duration-200 text-center font-mono uppercase tracking-wider;
+    }
+
+    .haiku-line {
+        @apply text-lg leading-relaxed text-wedding-800 italic;
+    }
+
+    .success-animation {
+        @apply animate-bounce-slow text-green-600;
+    }
+
+    .error-shake {
+        animation: shake 0.5s ease-in-out;
+    }
+
+    .timeout-warning {
+        @apply text-red-600 font-semibold animate-pulse-slow;
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-5px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(5px);
+    }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+    transition: all 0.4s ease;
+}
+
+.slide-up-enter-from {
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.slide-up-leave-to {
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+/* Custom wedding theme colors and animations */
+@theme {
+    --color-wedding-50: #fdf7f0;
+    --color-wedding-100: #fbeee1;
+    --color-wedding-200: #f6dac2;
+    --color-wedding-300: #f0c299;
+    --color-wedding-400: #e8a06d;
+    --color-wedding-500: #e2844a;
+    --color-wedding-600: #d46c3c;
+    --color-wedding-700: #b05432;
+    --color-wedding-800: #8c4330;
+    --color-wedding-900: #713729;
+
+    --animate-bounce-slow: bounce 2s infinite;
+    --animate-pulse-slow: pulse 3s infinite;
+}
