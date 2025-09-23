@@ -25,5 +25,4 @@ dist-ssr
 
 # Card generation output (contains solutions)
 cards-output/
-*.html
 haiku-solutions.md

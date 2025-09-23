@@ -27,19 +27,8 @@ jobs:
           node-version: "22"
           cache: "npm"
 
-      - name: Debug - List files
-        run: |
-          pwd
-          ls -la
-          ls -la gaderbauer-wedding-game/ || echo "No gaderbauer-wedding-game directory"
-
       - name: Install dependencies
         run: npm ci
-
-      - name: Debug - Check for index.html
-        run: |
-          ls -la index.html || echo "No index.html in root"
-          cat package.json | grep "name"
 
       - name: Build
         run: npm run build
