@@ -72,19 +72,21 @@ Das Spiel wird automatisch über GitHub Actions auf GitHub Pages deployed:
 
 ## 📊 Spielstatistiken
 
-- **15 Haikus** mit je 3 Zeilen
-- **45 Karten** für die Gäste
-- **15 gültige Kombinationen**
-- Jedes Haiku hat ein eigenes Thema rund um Liebe und Hochzeit
+- **17 Haikus** mit je 3 Zeilen
+- **51 Karten** für die Gäste
+- **17 gültige Kombinationen**
+- Jedes Haiku hat ein eigenes thematisches Motiv aus eurer 14-jährigen Geschichte
 
 ## 🎨 Haiku Themen
 
-Die Haikus behandeln romantische Hochzeitsthemen:
-- Ringe und Versprechen
-- Blumen und Natur
-- Musik und Tanz
-- Familie und Zukunft
-- Sterne und Träume
+Die Haikus reflektieren authentische Themen eurer Geschichte:
+- Burgmauern & Ewigkeit (Schallaburg)
+- Herbstgold & Neubeginn (September)
+- Alchemie & Verwandlung (Braukunst)
+- Zielgenauigkeit (Bogenschießen)
+- Kindheit & Weitergabe (Theodor)
+- Sprache & Präzision (linguistische Klarheit)
+- Handwerk & Zukunftsbau (Daniels Projekte)
 
 ## 📱 Browser-Kompatibilität
 
