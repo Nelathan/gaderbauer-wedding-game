@@ -1,138 +1,123 @@
-# AI Haiku Generation Prompt for Wedding Game
+# AI Haiku Generation Prompt for Wedding Celebration
 
-## Context & Mission
+## Mission: Wedding Poetry, Not Biography
 
-You are tasked with creating **16 exceptional German haikus** for Daniel & Astrid's wedding game on September 27, 2025, at Schallaburg Castle in Niederösterreich. This is not generic wedding poetry - these haikus must capture the authentic essence of a 14-year love story with depth, originality, and thematic diversity.
+You are creating **16 exceptional German haikus** for a wedding celebration puzzle game. These are **wedding poems** that happen to draw thematic inspiration from the couple's story - NOT biographical documentation of their relationship.
+
+**Critical Understanding**: Wedding guests will be solving these as puzzles during a joyful celebration at a historic Austrian castle. The haikus must feel **warm, celebratory, and universally wedding-appropriate** while carrying subtle thematic depth.
 
 ## Wedding Context
 
 **Couple:** Daniel & Astrid  
 **Date:** September 27, 2025  
-**Venue:** Schallaburg Castle, Niederösterreich (historic castle with apple orchard)  
-**Season:** Early autumn, golden light, harvest time  
+**Venue:** Schallaburg Castle, Niederösterreich  
+**Setting:** Historic castle with apple orchard (Apfelhain), golden September afternoon  
+**Guests:** 51 people solving haiku puzzles together  
 
-## Their Story (Essential Reading)
+## The Quality Standard
 
-Daniel & Astrid met in June 2010 at a friend's birthday party - instant connection. Long-distance courtship through Skype, with Astrid watching Daniel paint via screen sharing. Their first real date: February 4, 2011, a trip to Munich for a Faun concert, followed by thermal baths. That S-Bahn platform embrace became their "arriving home" moment.
+Your competition is this caliber of wedding poetry (notice: celebratory, warm, thematically rich but universally accessible):
 
-**Key Life Chapters:**
-- **2010-2013:** School years, weekend visits, first Croatia vacation in red car with windows down
-- **2013-2018:** Vienna WG life in Penzing, Astrid as nurse (DGKP), Daniel's civil service, Vietnam adventure (2016)
-- **2018-2022:** Daniel's computer science studies, CrossFit together, hiking, archery, festivals, dance classes
-- **2022:** Theodor born January 31 - rewrote their life plans, now ring bearer
-- **2023:** New family home in Penzing with garden
-- **2025:** Daniel's CS degree finished, VR project at Ars Electronica, Prague boat proposal in April
+- "Alte Steine schweigen / Zeit tropft durch verwitterte Fugen / Ewigkeit beginnt" *(castle eternity)*
+- "Blätter tanzen leis / Goldene Wege erwachen / Neuer Schritt in Licht" *(autumn new beginnings)*
+- "Honig wird zu Gold / Sanfte Wärme, Magie wächst / Liebe gärt im Fass" *(brewing/alchemy metaphors)*
+- "Sehne spannt sich still / Pfeil fliegt durch klare Gedanken / Herz trifft auf Ziel" *(precision/archery themes)*
 
-**Their Essence:**
-- Team mentality, humor, patience
-- Balance of quiet home days and big adventures  
-- Precision in language, craftsmanship values
-- Shared passions: archery, brewing, CrossFit, watercolor painting
-- ENTP (Daniel) meets practical nursing expertise (Astrid)
+## Thematic Inspiration Areas
 
-## Current Haiku Benchmark (Your Competition)
+**From Castle & Season:**
+- Medieval stone architecture, ancient walls
+- Apple orchards in September harvest
+- Golden autumn light, crisp air
+- Austrian landscape, Danube region
 
-Here are the 17 existing haikus that set the quality bar - you must match or exceed this level:
+**From Their Passions (as metaphors):**
+- Archery: precision, focus, hitting targets, steady aim
+- Brewing: fermentation, patience, alchemy, transformation (specifically mead/Met)
+- Craftsmanship: building, precision, attention to detail
+- Language: clarity, communication, understanding
+- Adventure: exploration, courage, discovery
 
-1. **Burgmauern & Ewigkeit** - Alte Steine schweigen / Zeit tropft durch verwitterte Fugen / Ewigkeit beginnt
-2. **Herbstgold & Neubeginn** - Blätter tanzen leis / Goldene Wege erwachen / Neuer Schritt in Licht  
-3. **Sternennacht & Visionen** - Sterne spinnen Licht / Nachthimmel trägt eure Träume / Zukunft leuchtet klar
-4. **Wein & Lebenslust** - Weinreben im Wind / Gläser klingen, Stimmen singen / Fest im Abendrot
-5. **Alchemie & Verwandlung** - Honig wird zu Gold / Sanfte Wärme, Magie wächst / Liebe gärt im Fass
-6. **Zwei Flüsse vereinen sich** - Wasser sucht Wasser / Zwei Ströme verschlingen sich / Neuer Strom entsteht
-7. **Wortlose Nähe** - Blicke sagen mehr / Stille trägt geteiltes Lachen / Herzen hören zu
-8. **Zeitreise & Geschichte** - Alte Uhren ticken / Vergangenheit flüstert leis / Heute wird Legende
-9. **Zielgenauigkeit** - Sehne spannt sich still / Pfeil fliegt durch klare Gedanken / Herz trifft auf Ziel
-10. **Kindheit & Weitergabe** - Kinderlachen fliegt / Alte Spiele, neue Hände / Zeit wandert im Kreis
-11. **Karte & Entdeckungslust** - Unbekanntes Land / Hand in Hand die Wege zeichnen / Neugier führt euch weit
-12. **Geheimnis der Nacht** - Nachts flüstert der Wind / Geheimnisse in Schatten / Träume wiegen sanft
-13. **Handwerk & Zukunftsbau** - Werkzeug ruht im Licht / Pläne wachsen zwischen Händen / Zukunft wird gebaut
-14. **Natur & Stille** - Morgentau im Gras / Birken flüstern eure Namen / Stille wie ein Lied
-15. **Freude & Gemeinschaft** - Glück springt von Gesicht / Lachen rollt wie Wellen fort / Heute sind wir eins
-16. **Mut & Aufbruch** - Tür knarrt in den Tag / Schritte wagen fremde Pfade / Mut blüht im Morgen
-17. **Sprache & Präzision** - Ein Wort wiegt ein Jahr / Klarheit schneidet durch das Grau / Sprache baut Brücken
+**Universal Wedding Themes:**
+- Two becoming one
+- Building future together  
+- Celebration and community
+- Commitment and promises
+- Joy and laughter
+- Family and legacy
+- Time and eternity
+- Trust and partnership
 
-## Requirements & Constraints
+## What NOT to Do
 
-### Formal Requirements
-- **Exactly 16 haikus** (5-7-5 syllable structure in German)
-- **Perfect German grammar** and natural flow
-- Each haiku needs **thematic orthogonality** - no overlapping themes
-- Each line will be printed on separate cards for a puzzle game
+❌ **Biographical documentation** ("Skype calls", "Vietnam trip", "Theodor was born")  
+❌ **Melancholic or dark imagery** ("nasser Stahl", "Nachtdienst")  
+❌ **Work/career references** (nursing, VR projects)  
+❌ **Overly specific personal details** that only the couple would understand  
+❌ **Forced rhyming or unnatural German**  
+❌ **Generic wedding clichés** (rings, white dresses, roses)  
 
-### Quality Standards
-- **Avoid clichés** - no generic wedding/love poetry
-- **Authentic connection** to Daniel & Astrid's specific story
-- **Emotional resonance** without sentimentality
-- **Imagery that breathes** - concrete, sensory details
-- **Natural German rhythm** that honors traditional haiku form
+## Requirements
 
-### Thematic Inspiration Areas
+### Technical
+- **Exactly 16 haikus** in perfect 5-7-5 German syllable structure
+- **Natural German flow** and beautiful poetry
+- **Thematically orthogonal** - each completely distinct theme
+- **Wedding celebration appropriate** - warm, joyful, celebratory
 
-**Historical/Location:**
-- Castle architecture, medieval stones
-- Niederösterreich landscape, Danube region
-- Apfelhain (apple orchard) at Schallaburg
-- September/autumn atmosphere
+### Creative
+- **Universal accessibility** - any wedding guest should feel the beauty
+- **Subtle depth** - multiple layers of meaning without obscurity  
+- **Sensory richness** - concrete imagery that breathes
+- **Emotional warmth** - appropriate for a joyful celebration
 
-**Personal Story Elements:**
-- Digital courtship, screen sharing art sessions
-- S-Bahn platform moment, thermal baths
-- Red car Croatia adventures  
-- Vienna WG community life
-- Theodor as family game-changer
-- Prague boat proposal scene
-- Ars Electronica VR project
+## Thematic Categories to Explore
 
-**Shared Passions:**
-- Archery precision, bow and arrow metaphors
-- Brewing alchemy, fermentation processes
-- CrossFit strength, shared effort
-- Watercolor painting, color bleeding
-- Dance partnerships, rhythm, trust
-- Festival energy, music immersion
-- Hiking trails, mountain perspectives
+**Architectural/Temporal:**
+- Castle stones and time
+- Building foundations (literal and metaphorical)
+- Rooms becoming homes
+- Ancient wisdom, modern love
 
-**Relationship Dynamics:**
-- ENTP curiosity meets practical wisdom  
-- Humor as relationship foundation
-- Precision in communication
-- Craftsperson mentality applied to love
-- Team approach to life challenges
-- Balance of adventure and domestic peace
+**Natural/Seasonal:**
+- Autumn harvest metaphors
+- Apple orchard imagery  
+- Light and shadow play
+- Seasons of relationship
 
-**Life Philosophy:**
-- Language precision (Daniel's value)
-- Maintainable over optimized (coding philosophy applied to life)
-- Cognitive load awareness
-- Growth through intellectual sparring
-- Tangible creation impulses
+**Craft/Creation:**
+- Making something lasting
+- Precision in creation
+- Patience in process
+- Tools becoming art
+
+**Community/Celebration:**
+- Voices joining together
+- Shared laughter and joy
+- Circle of loved ones
+- Generational connections
+
+**Partnership Dynamics:**
+- Two rhythms becoming one
+- Balance and harmony
+- Trust and support
+- Shared vision
 
 ## Output Format
 
-For each haiku, provide:
+For each haiku:
 
 ```
-## [Theme Title]
+## [Evocative Theme Title]
 [Line 1 - 5 syllables]
-[Line 2 - 7 syllables]  
+[Line 2 - 7 syllables]
 [Line 3 - 5 syllables]
 ```
 
-## Success Criteria
+## Success Vision
 
-Your haikus will be evaluated on:
+Imagine: Wedding guests solving these puzzles, feeling the warmth and beauty of each completed haiku, smiling at universal truths about love and commitment. The poems should enhance the celebration atmosphere - making people feel the joy of the moment and the depth of lasting love.
 
-1. **Orthogonality** - Each theme must be distinctly different
-2. **Authenticity** - Clear connection to Daniel & Astrid's specific story
-3. **Poetic Quality** - Natural German flow, vivid imagery, emotional truth
-4. **Game Functionality** - Each haiku must work as a 3-person puzzle
-5. **Cultural Fit** - Appropriate for Austrian/German wedding celebration
+These haikus should be **celebration poetry** that happens to be perfectly suited for this specific couple, not biographical documentaries in verse form.
 
-## Final Challenge
-
-Create 16 haikus that could make Daniel & Astrid tear up with recognition while their guests smile at the authentic beauty. These poems should feel like they could only belong to this specific couple, in this specific place, at this specific moment in their story.
-
-Your haikus should be worthy of being remembered 20 years from now.
-
-Begin.
+Create 16 haikus worthy of a golden September afternoon in an Austrian castle, where love is being celebrated and community is being built.

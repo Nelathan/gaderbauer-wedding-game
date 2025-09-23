@@ -112,7 +112,7 @@
 
             <!-- Statistics -->
             <div class="mt-8 text-center text-sm text-wedding-500">
-                <p>🎯 17 Haikus warten darauf, entdeckt zu werden</p>
+                <p>🎯 16 Haikus warten darauf, entdeckt zu werden</p>
                 <p v-if="attemptCount > 0" class="mt-1">📊 Deine Versuche: {{ attemptCount }}</p>
             </div>
         </div>

@@ -72,9 +72,9 @@ Das Spiel wird automatisch über GitHub Actions auf GitHub Pages deployed:
 
 ## 📊 Spielstatistiken
 
-- **17 Haikus** mit je 3 Zeilen
-- **51 Karten** für die Gäste
-- **17 gültige Kombinationen**
+- **16 Haikus** mit je 3 Zeilen
+- **48 Karten** für die Gäste
+- **16 gültige Kombinationen**
 - Jedes Haiku hat ein eigenes thematisches Motiv aus eurer 14-jährigen Geschichte
 
 ## 🎨 Haiku Themen

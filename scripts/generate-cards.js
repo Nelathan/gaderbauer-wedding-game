@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 
-import { haikus } from "../src/data/haikus.js";
+import { getActiveHaikus } from "../src/data/haikus.js";
 import fs from "fs";
 import path from "path";
 
 // Generate HTML for printable cards
 const generateCardsHTML = () => {
-  const allLines = haikus.flatMap((haiku) => haiku.lines);
+  const activeHaikus = getActiveHaikus();
+  const allLines = activeHaikus.flatMap((haiku) => haiku.lines);
 
   let html = `
 <!DOCTYPE html>
@@ -240,9 +241,9 @@ const generateCardsHTML = () => {
         <p><strong>Tipp:</strong> Achtet auf die thematischen Verbindungen der Zeilen!</p>
 
         <h3>📊 Spielstatistik</h3>
-        <p>• ${haikus.length} Haikus insgesamt<br>
+        <p>• ${activeHaikus.length} Haikus insgesamt<br>
         • ${allLines.length} Karten für ${allLines.length} Gäste<br>
-        • ${haikus.length} mögliche Lösungen<br>
+        • ${activeHaikus.length} mögliche Lösungen<br>
         • Themen aus 14 Jahren Daniel & Astrid</p>
     </div>
 </body>
@@ -258,7 +259,7 @@ const generateMarkdownList = () => {
   markdown += `*Diese Datei ist nur für das Brautpaar gedacht!*\n\n`;
   markdown += `**Hochzeit:** Daniel & Astrid • 27.09.2025 • Schallaburg\n\n`;
 
-  haikus.forEach((haiku, index) => {
+  getActiveHaikus().forEach((haiku, index) => {
     markdown += `## Haiku ${index + 1} - ${haiku.theme}\n\n`;
     haiku.lines.forEach((line, lineIndex) => {
       markdown += `**Zeile ${lineIndex + 1}:** "${line.text}" → \`${line.codeword}\`\n\n`;
@@ -299,11 +300,11 @@ const main = () => {
         gameUrl: "https://yourusername.github.io/gaderbauer-wedding-game/",
       },
       statistics: {
-        totalHaikus: haikus.length,
-        totalCards: haikus.length * 3,
-        totalGuests: haikus.length * 3,
+        totalHaikus: getActiveHaikus().length,
+        totalCards: getActiveHaikus().length * 3,
+        totalGuests: getActiveHaikus().length * 3,
       },
-      haikus: haikus,
+      haikus: getActiveHaikus(),
     };
     fs.writeFileSync(path.join(outputDir, "haiku-data.json"), JSON.stringify(jsonData, null, 2));
 
@@ -317,8 +318,8 @@ const main = () => {
     console.log("🖨️  Zum Drucken: Öffnet haiku-cards.html im Browser");
     console.log("📱 Für mobile Ansicht: Responsive Design inklusive");
     console.log("");
-    console.log(`🎯 Insgesamt ${haikus.length * 3} Karten für ${haikus.length * 3} Gäste`);
-    console.log(`✨ ${haikus.length} verschiedene Haikus zu entdecken`);
+    console.log(`🎯 Insgesamt ${getActiveHaikus().length * 3} Karten für ${getActiveHaikus().length * 3} Gäste`);
+    console.log(`✨ ${getActiveHaikus().length} verschiedene Haikus zu entdecken`);
     console.log(`🏰 Themen aus 14 Jahren Daniel & Astrid Geschichte`);
   } catch (error) {
     console.error("❌ Fehler beim Generieren der Karten:", error);
