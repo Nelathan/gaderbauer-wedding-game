@@ -41,11 +41,16 @@
       <!-- Game Card -->
       <div class="card max-w-lg mx-auto shadow-xl sm:shadow-2xl">
         <!-- Timeout Warning -->
-        <div v-if="timeoutRemaining > 0" class="mb-6 text-center">
+        <div
+          v-if="timeoutRemaining > 0"
+          class="mb-6 text-center"
+        >
           <div
             class="text-red-600 font-semibold animate-pulse-slow p-4 bg-red-50 rounded-lg border border-red-200"
           >
-            <p class="font-semibold">⏰ Bitte warten...</p>
+            <p class="font-semibold">
+              ⏰ Bitte warten...
+            </p>
             <p class="text-sm">
               Noch {{ formatTimeoutDisplay(timeoutRemaining) }} bis zum nächsten
               Versuch
@@ -54,7 +59,10 @@
         </div>
 
         <!-- Input Form -->
-        <form class="space-y-6" @submit.prevent="handleSubmit">
+        <form
+          class="space-y-6"
+          @submit.prevent="handleSubmit"
+        >
           <div class="space-y-4 sm:space-y-6">
             <div>
               <label
@@ -84,7 +92,7 @@
                   validateCodeword('codeword1', codeword1);
                   input2Ref?.focus();
                 "
-              />
+              >
             </div>
 
             <div>
@@ -119,7 +127,7 @@
                   validateCodeword('codeword2', codeword2);
                   input3Ref?.focus();
                 "
-              />
+              >
             </div>
 
             <div>
@@ -149,7 +157,7 @@
                   validateCodeword('codeword3', codeword3);
                   handleSubmit();
                 "
-              />
+              >
             </div>
           </div>
 
@@ -160,7 +168,10 @@
             :class="{ 'btn-loading': isLoading }"
             :disabled="timeoutRemaining > 0 || isLoading"
           >
-            <span v-if="isLoading" class="invisible">🔍 Prüfe...</span>
+            <span
+              v-if="isLoading"
+              class="invisible"
+            >🔍 Prüfe...</span>
             <span v-else-if="timeoutRemaining > 0">
               ⏰ Warten ({{ Math.ceil(timeoutRemaining / 1000) }}s)
             </span>
@@ -178,7 +189,10 @@
 
         <!-- Error Message -->
         <Transition name="slide-up">
-          <div v-if="errorMessage" class="mt-6">
+          <div
+            v-if="errorMessage"
+            class="mt-6"
+          >
             <div
               class="bg-red-50 border border-red-200 rounded-lg p-4 text-center relative overflow-hidden"
             >
@@ -192,7 +206,10 @@
                     {{ errorMessage }}
                   </p>
                 </div>
-                <p v-if="attemptCount > 0" class="text-sm text-red-600">
+                <p
+                  v-if="attemptCount > 0"
+                  class="text-sm text-red-600"
+                >
                   Versuche bisher: {{ attemptCount }}
                 </p>
                 <div
@@ -268,7 +285,10 @@
 
       <!-- Statistics -->
       <div class="mt-6 sm:mt-8 text-center text-sm text-bohemian-500">
-        <p v-if="attemptCount > 0" class="mt-1">
+        <p
+          v-if="attemptCount > 0"
+          class="mt-1"
+        >
           📊 Deine Versuche: {{ attemptCount }}
         </p>
       </div>
