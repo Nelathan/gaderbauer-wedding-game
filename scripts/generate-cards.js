@@ -38,6 +38,12 @@ const generateCardsHTML = () => {
             max-width: 210mm; /* A4 width */
         }
 
+        .card-container {
+            display: flex;
+            gap: 10mm;
+            margin-bottom: 10mm;
+        }
+
         .card {
             width: 60mm;
             height: 85mm; /* Standard business card size */
@@ -47,24 +53,15 @@ const generateCardsHTML = () => {
             page-break-inside: avoid;
             position: relative;
             overflow: hidden;
-        }
-
-        .card-front, .card-back {
-            width: 100%;
-            height: 100%;
-            padding: 8mm;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            position: absolute;
-            top: 0;
-            left: 0;
+            padding: 8mm;
         }
 
         .card-back {
-            transform: rotateY(180deg);
             background: linear-gradient(135deg, #f0c299 0%, #e8a06d 100%);
         }
 
@@ -124,7 +121,9 @@ const generateCardsHTML = () => {
 
         @media print {
             body { background: white; }
-            .cards-container { gap: 5mm; }
+            .cards-container {
+                gap: 5mm;
+            }
             .card {
                 box-shadow: none;
                 border: 1px solid #e2844a;
@@ -178,46 +177,43 @@ const generateCardsHTML = () => {
 
   allLines.forEach((line, index) => {
     const cardNumber = index + 1;
-    const haikuNumber = Math.floor(index / 3) + 1;
-    const lineNumber = (index % 3) + 1;
 
     html += `
-        <div class="card">
-            <div class="card-front">
-                <div class="decorative top-left">🌸</div>
-                <div class="decorative top-right">💕</div>
+      <div class="card-container">
+        <div class="card card-front">
+            <div class="decorative top-left">🌸</div>
+            <div class="decorative top-right">💕</div>
 
-                <div class="haiku-line">${line.text}</div>
+            <div class="haiku-line">${line.text}</div>
 
-                <div class="decorative bottom-left">✨</div>
-                <div class="decorative bottom-right">🌸</div>
+            <div class="decorative bottom-left">✨</div>
+            <div class="decorative bottom-right">🌸</div>
 
-                <div class="card-number">
-                    Karte ${cardNumber} | Haiku ${haikuNumber}.${lineNumber}
-                </div>
-            </div>
-
-            <div class="card-back">
-                <div class="decorative top-left">💒</div>
-                <div class="decorative top-right">💍</div>
-
-                <div class="codeword-label">CODEWORT</div>
-                <div class="codeword">${line.codeword}</div>
-
-                <div class="wedding-info">
-                    Daniel & Astrid<br>
-                    27.09.2025<br>
-                    Haiku ${haikuNumber} • Zeile ${lineNumber}
-                </div>
-
-                <div class="decorative bottom-left">🥂</div>
-                <div class="decorative bottom-right">💒</div>
+            <div class="card-number">
+                Karte ${cardNumber}
             </div>
         </div>
+
+        <div class="card card-back">
+            <div class="decorative top-left">💒</div>
+            <div class="decorative top-right">💍</div>
+
+            <div class="codeword-label">CODEWORT</div>
+            <div class="codeword">${line.codeword}</div>
+
+            <div class="wedding-info">
+                Daniel & Astrid<br>
+                27.09.2025
+            </div>
+
+            <div class="decorative bottom-left">🥂</div>
+            <div class="decorative bottom-right">💒</div>
+        </div>
+      </div>
     `;
 
-    // Add page break every 9 cards (3x3 grid)
-    if ((index + 1) % 9 === 0 && index < allLines.length - 1) {
+    // Add page break every 3 cards (3x1 grid)
+    if ((index + 1) % 3 === 0 && index < allLines.length - 1) {
       html += `</div><div class="page-break"></div><div class="cards-container">`;
     }
   });
@@ -258,17 +254,20 @@ const generateMarkdownList = () => {
   let markdown = `# 🌸 Haiku Hochzeitsspiel - Lösungsliste\n\n`;
   markdown += `*Diese Datei ist nur für das Brautpaar gedacht!*\n\n`;
   markdown += `**Hochzeit:** Daniel & Astrid • 27.09.2025 • Schallaburg\n\n`;
+  markdown += `## 📋 Spielanleitung für die Gäste\n\n`;
+  markdown += `1. **Karte erhalten:** Jeder Gast bekommt eine Karte mit einer Haiku-Zeile\n`;
+  markdown += `2. **Partner finden:** Sucht zwei andere Gäste, deren Zeilen zu einem Haiku passen\n`;
+  markdown += `3. **Codewörter sammeln:** Notiert euch die drei Codewörter von den Kartenrückseiten\n`;
+  markdown += `4. **Website besuchen:** Geht zur Spiel-Website (QR-Code oder Link)\n`;
+  markdown += `5. **Eingabe:** Gebt die drei Codewörter in der richtigen Reihenfolge ein\n`;
+  markdown += `6. **Erfolg:** Bei richtiger Kombination wird das komplette Haiku angezeigt! 🎉\n\n`;
+  markdown += `---`;
 
   getActiveHaikus().forEach((haiku, index) => {
-    markdown += `## Haiku ${index + 1} - ${haiku.theme}\n\n`;
-    haiku.lines.forEach((line, lineIndex) => {
-      markdown += `**Zeile ${lineIndex + 1}:** "${line.text}" → \`${line.codeword}\`\n\n`;
-    });
-    markdown += `**Vollständiges Haiku:**\n`;
+    markdown += `\n\n## ${index + 1}. ${haiku.theme}\n\n`;
     haiku.lines.forEach((line) => {
-      markdown += `> ${line.text}\n`;
+      markdown += `| \`${line.codeword}\` | ${line.text} |\n`;
     });
-    markdown += `\n---\n\n`;
   });
 
   return markdown;

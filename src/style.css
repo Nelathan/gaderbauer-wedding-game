@@ -1,74 +1,360 @@
+/* We are using @import "tailwindcss"; instead of the standard @tailwind directives
+   because the `@tailwindcss/vite` plugin requires it and there is no version of
+   `eslint-plugin-tailwindcss` that supports Tailwind CSS v4 yet. */
 @import "tailwindcss";
 
+@theme {
+  --color-wedding-25: #fffbfb;
+  --color-wedding-50: #fef2f2;
+  --color-wedding-100: #fee2e2;
+  --color-wedding-200: #fecaca;
+  --color-wedding-300: #fca5a5;
+  --color-wedding-400: #f87171;
+  --color-wedding-500: #dc2626;
+  --color-wedding-600: #b91c1c;
+  --color-wedding-700: #991b1b;
+  --color-wedding-800: #7f1d1d;
+  --color-wedding-900: #450a0a;
+  --color-wedding-950: #1c0404;
+
+  --color-bohemian-25: #fdfcfb;
+  --color-bohemian-50: #faf8f5;
+  --color-bohemian-100: #f3efea;
+  --color-bohemian-200: #e6ddd4;
+  --color-bohemian-300: #d4c4b5;
+  --color-bohemian-400: #bfa892;
+  --color-bohemian-500: #a68b6b;
+  --color-bohemian-600: #8b7355;
+  --color-bohemian-700: #6f5c46;
+  --color-bohemian-800: #564639;
+  --color-bohemian-900: #40342b;
+
+  --color-red-25: #fef7f7;
+  --color-red-50: #fef2f2;
+  --color-red-100: #fee2e2;
+  --color-red-200: #fecaca;
+  --color-red-300: #fca5a5;
+  --color-red-400: #f87171;
+  --color-red-500: #ef4444;
+  --color-red-600: #dc2626;
+  --color-red-700: #b91c1c;
+  --color-red-800: #991b1b;
+  --color-red-900: #7f1d1d;
+
+  --color-green-25: #f0fdf4;
+  --color-green-50: #f0fdf4;
+  --color-green-100: #dcfce7;
+  --color-green-200: #bbf7d0;
+  --color-green-300: #86efac;
+  --color-green-400: #4ade80;
+  --color-green-500: #22c55e;
+  --color-green-600: #16a34a;
+  --color-green-700: #15803d;
+  --color-green-800: #166534;
+  --color-green-900: #14532d;
+}
+
 @layer base {
-    body {
-        @apply bg-gradient-to-br from-wedding-50 to-wedding-100 min-h-screen font-serif;
-    }
+  body {
+    @apply bg-gradient-to-br from-wedding-25 to-bohemian-50 min-h-screen font-serif;
+  }
 }
 
 @layer components {
-    .card {
-        @apply bg-white rounded-lg shadow-lg p-6 border border-wedding-200;
-    }
+  .card {
+    @apply bg-white rounded-lg shadow-lg p-6 border border-bohemian-200;
+  }
 
-    .btn-primary {
-        @apply bg-wedding-500 hover:bg-wedding-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
-    }
+  .btn-primary {
+    @apply bg-wedding-500 hover:bg-wedding-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
 
-    .input-field {
-        @apply w-full p-3 border-2 border-wedding-200 rounded-lg focus:border-wedding-500 focus:outline-none transition-colors duration-200 text-center font-mono uppercase tracking-wider;
-    }
+  .input-field {
+    @apply w-full p-4 border-2 border-bohemian-300 rounded-lg focus:border-wedding-500 focus:outline-none focus:ring-2 focus:ring-wedding-200 focus:bg-wedding-25 transition-all duration-200 text-center font-mono uppercase tracking-wider text-lg font-semibold placeholder:text-bohemian-400 placeholder:font-normal hover:border-wedding-400 disabled:bg-gray-50 disabled:text-gray-400;
+  }
 
-    .haiku-line {
-        @apply text-lg leading-relaxed text-wedding-800 italic;
-    }
+  .input-field:focus-visible {
+    @apply ring-4 ring-wedding-300 border-wedding-600;
+  }
 
-    .error-shake {
-        animation: shake 0.5s ease-in-out;
-    }
+  .haiku-line {
+    @apply text-lg leading-relaxed text-bohemian-800 italic;
+  }
+
+  .error-shake {
+    animation: shake 0.5s ease-in-out;
+    @apply border-red-500 bg-red-50 focus:ring-red-300 focus:border-red-500;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-bounce-slow {
+    animation: bounce-slow 2s infinite;
+  }
 }
 
 @keyframes shake {
-    0%,
-    100% {
-        transform: translateX(0);
-    }
-    10%,
-    30%,
-    50%,
-    70%,
-    90% {
-        transform: translateX(-5px);
-    }
-    20%,
-    40%,
-    60%,
-    80% {
-        transform: translateX(5px);
-    }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
 }
 
 .fade-enter-active,
 .fade-leave-active {
-    transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .fade-enter-from,
 .fade-leave-to {
-    opacity: 0;
+  opacity: 0;
 }
 
 .slide-up-enter-active,
 .slide-up-leave-active {
-    transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .slide-up-enter-from {
-    transform: translateY(20px);
-    opacity: 0;
+  transform: translateY(20px);
+  opacity: 0;
 }
 
 .slide-up-leave-to {
-    transform: translateY(-20px);
-    opacity: 0;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+/* Custom wedding theme utilities */
+.wedding-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--color-wedding-25) 0%,
+    var(--color-bohemian-50) 100%
+  );
+}
+
+.wedding-text-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--color-wedding-600) 0%,
+    var(--color-bohemian-800) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Enhanced shadow utilities */
+.shadow-glow {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.15);
+}
+
+.shadow-glow-hover:hover {
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.2);
+}
+
+/* Interactive states */
+.interactive-scale {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.interactive-scale:hover {
+  transform: scale(1.02);
+}
+
+.interactive-scale:active {
+  transform: scale(0.98);
+}
+
+/* Text selection styling */
+::selection {
+  background-color: rgba(168, 85, 247, 0.2);
+  color: inherit;
+}
+
+/* Custom scrollbar for modal */
+.modal-content {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(168, 85, 247, 0.3) transparent;
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: rgba(168, 85, 247, 0.3);
+  border-radius: 3px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(168, 85, 247, 0.5);
+}
+
+/* Improved focus indicators */
+.focus-outline:focus-visible {
+  outline: 2px solid rgba(168, 85, 247, 0.6);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Loading shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Improved card hover effect */
+.card-interactive {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.card-interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  border-color: var(--color-bohemian-300);
+}
+
+/* Progress bar animations */
+.progress-bar {
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: progress-shine 2s infinite;
+}
+
+@keyframes progress-shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes bounce-slow {
+  0%,
+  20%,
+  53%,
+  80%,
+  100% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  70% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Enhanced focus states for keyboard accessibility */
+.btn-primary:focus-visible {
+  @apply ring-4 ring-wedding-400 ring-offset-2;
+}
+
+button:focus-visible {
+  @apply ring-2 ring-offset-2;
+}
+
+/* Skip link for screen readers */
+.skip-link {
+  @apply absolute -top-40 left-6 bg-wedding-700 text-white px-4 py-2 rounded-lg z-50 transition-all duration-200;
+}
+
+.skip-link:focus {
+  @apply top-6;
+}
+
+/* Loading state */
+.btn-loading {
+  position: relative;
+  @apply text-transparent;
+}
+
+.btn-loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
