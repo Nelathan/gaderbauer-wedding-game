@@ -25,6 +25,8 @@ Jeder Gast erhält eine Karte mit:
 - **Vite** (Build Tool)
 - **Tailwind CSS** (Styling)
 - **CryptoJS** (SHA-256 Verifikation)
+- **ESLint** (Linting)
+- **Prettier** (Formatting)
 
 ### Installation
 
@@ -38,6 +40,12 @@ npm install
 npm run dev
 ```
 
+### Linting
+
+```bash
+npm run lint
+```
+
 ### Build
 
 ```bash
@@ -47,7 +55,7 @@ npm run build
 ### Deployment
 
 Das Spiel wird automatisch über GitHub Actions auf GitHub Pages deployed:
-- **URL**: `https://yourusername.github.io/gaderbauer-wedding-game/`
+- **URL**: `https://nelathan.github.io/gaderbauer-wedding-game/`
 - **Trigger**: Push auf `main` oder `master` Branch
 
 ## 🔧 Spielmechanik
@@ -55,6 +63,7 @@ Das Spiel wird automatisch über GitHub Actions auf GitHub Pages deployed:
 ### Verifikation
 - Jede gültige Haiku-Kombination wird über SHA-256 Hash verifiziert
 - **Hash-Input**: `CODEWORT1 + CODEWORT2 + CODEWORT3 + SECRET_SALT`
+- Die Codewörter sind einzigartig und thematisch passend gewählt.
 - Keine Lösungsdatei im Frontend - nur Hashes zum Abgleich
 
 ### Brute-Force Schutz

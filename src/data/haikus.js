@@ -178,8 +178,8 @@ export const haikus = [
     theme: "Septembergold",
     active: false,
     lines: [
-      { text: "Goldenes Licht fällt", codeword: "LICHT2" },
-      { text: "Durch goldene Blätter sanft", codeword: "SANFT2" },
+      { text: "Goldenes Licht fällt", codeword: "SCHEIN" },
+      { text: "Durch goldene Blätter sanft", codeword: "WARM" },
       { text: "Ein Versprechen reift", codeword: "REIF" },
     ],
   },
@@ -199,7 +199,7 @@ export const haikus = [
     active: false,
     lines: [
       { text: "Lachen füllt den Raum", codeword: "LACHEN" },
-      { text: "Helles Echo hallt zurück", codeword: "ECHO2" },
+      { text: "Helles Echo hallt zurück", codeword: "HALL" },
       { text: "Die Freude klingt nach", codeword: "FREUDE" },
     ],
   },
@@ -208,8 +208,8 @@ export const haikus = [
     theme: "Goldene Alchemie",
     active: false,
     lines: [
-      { text: "Süßer Honig gärt", codeword: "HONIG2" },
-      { text: "Zeit verwandelt ihn zu Gold", codeword: "ZEIT2" },
+      { text: "Süßer Honig gärt", codeword: "SUESS" },
+      { text: "Zeit verwandelt ihn zu Gold", codeword: "WANDEL" },
       { text: "Ein Fest für die Sinn'", codeword: "SINN" },
     ],
   },
@@ -218,9 +218,9 @@ export const haikus = [
     theme: "Ewiger Mauerklang",
     active: true,
     lines: [
-      { text: "Alte Steine still", codeword: "STILL2" },
+      { text: "Alte Steine still", codeword: "RUHE" },
       { text: "Zeit atmet leis durch Fugen", codeword: "ATEM" },
-      { text: "Heute wächst Zukunft", codeword: "HEUTE2" },
+      { text: "Heute wächst Zukunft", codeword: "JETZT" },
     ],
   },
   {
@@ -238,9 +238,9 @@ export const haikus = [
     theme: "Septemberschein",
     active: false,
     lines: [
-      { text: "Goldener Atem", codeword: "GOLD2" },
+      { text: "Goldener Atem", codeword: "GLANZ" },
       { text: "Luft knistert, Wege sind neu", codeword: "KNISTER" },
-      { text: "Schritte werden eins", codeword: "SCHRITT2" },
+      { text: "Schritte werden eins", codeword: "WEG" },
     ],
   },
   {
@@ -248,8 +248,8 @@ export const haikus = [
     theme: "Pfeil und Atem",
     active: true,
     lines: [
-      { text: "Sehne spannt sich still", codeword: "SEHNE2" },
-      { text: "Atem zählt den Augenblick", codeword: "BLICK2" },
+      { text: "Sehne spannt sich still", codeword: "BOGEN" },
+      { text: "Atem zählt den Augenblick", codeword: "AUGE" },
       { text: "Ziel wird Richtung: wir", codeword: "RICHTUNG" },
     ],
   },
@@ -259,7 +259,7 @@ export const haikus = [
     active: true,
     lines: [
       { text: "Honig küsst die Zeit", codeword: "KUSS" },
-      { text: "Wärme wandelt Gold zu Klang", codeword: "WANDEL" },
+      { text: "Wärme wandelt Gold zu Klang", codeword: "GOLD" },
       { text: "Liebe reift Geduld", codeword: "REIFE" },
     ],
   },
@@ -308,9 +308,9 @@ export const haikus = [
     theme: "Sprache wird Brücke",
     active: true,
     lines: [
-      { text: "Worte tragen weit", codeword: "WORT2" },
-      { text: "Klarheit baut zarte Brücken", codeword: "ZART2" },
-      { text: "Sinn geht Hand in Hand", codeword: "HAND2" },
+      { text: "Worte tragen weit", codeword: "SPRACHE" },
+      { text: "Klarheit baut zarte Brücken", codeword: "ZART" },
+      { text: "Sinn geht Hand in Hand", codeword: "BANDE" },
     ],
   },
   {
@@ -320,7 +320,7 @@ export const haikus = [
     lines: [
       { text: "Karte ohne Rand", codeword: "KARTE" },
       { text: "Mut zeichnet Horizonte", codeword: "HORIZONT" },
-      { text: "Hand hält Hand ganz fest", codeword: "FEST2" },
+      { text: "Hand hält Hand ganz fest", codeword: "HALT" },
     ],
   },
   {
@@ -330,7 +330,7 @@ export const haikus = [
     lines: [
       { text: "Stimmen füllen Hof", codeword: "STIMME" },
       { text: "Freude springt von Mund zu Mund", codeword: "MUND" },
-      { text: "Klang trägt Herzklang heim", codeword: "KLANG2" },
+      { text: "Klang trägt Herzklang heim", codeword: "STIMME" },
     ],
   },
   {
@@ -338,7 +338,7 @@ export const haikus = [
     theme: "Kreis der Hände",
     active: false,
     lines: [
-      { text: "Um uns wächst ein Kreis", codeword: "KREIS2" },
+      { text: "Um uns wächst ein Kreis", codeword: "RUNDE" },
       { text: "Nah und fern in einem Klang", codeword: "NAH" },
       { text: "Segen wird zu Weg", codeword: "SEGEN" },
     ],

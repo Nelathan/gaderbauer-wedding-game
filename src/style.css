@@ -23,16 +23,8 @@
         @apply text-lg leading-relaxed text-wedding-800 italic;
     }
 
-    .success-animation {
-        @apply animate-bounce-slow text-green-600;
-    }
-
     .error-shake {
         animation: shake 0.5s ease-in-out;
-    }
-
-    .timeout-warning {
-        @apply text-red-600 font-semibold animate-pulse-slow;
     }
 }
 
@@ -79,21 +71,4 @@
 .slide-up-leave-to {
     transform: translateY(-20px);
     opacity: 0;
-}
-
-/* Custom wedding theme colors and animations */
-@theme {
-    --color-wedding-50: #fdf7f0;
-    --color-wedding-100: #fbeee1;
-    --color-wedding-200: #f6dac2;
-    --color-wedding-300: #f0c299;
-    --color-wedding-400: #e8a06d;
-    --color-wedding-500: #e2844a;
-    --color-wedding-600: #d46c3c;
-    --color-wedding-700: #b05432;
-    --color-wedding-800: #8c4330;
-    --color-wedding-900: #713729;
-
-    --animate-bounce-slow: bounce 2s infinite;
-    --animate-pulse-slow: pulse 3s infinite;
 }

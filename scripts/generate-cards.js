@@ -170,7 +170,7 @@ const generateCardsHTML = () => {
             <li>Optional: Auf dickerem Papier (200g/m²) drucken</li>
             <li>Die Karten werden automatisch nummeriert für einfache Verteilung</li>
         </ul>
-        <p><strong>Spiel-URL:</strong> <em>Wird nach Deployment eingefügt</em></p>
+        <p><strong>Spiel-URL:</strong> <a href="https://nelathan.github.io/gaderbauer-wedding-game/">https://nelathan.github.io/gaderbauer-wedding-game/</a></p>
     </div>
 
     <div class="cards-container">
@@ -297,7 +297,7 @@ const main = () => {
       wedding: {
         couple: "Daniel & Astrid",
         date: "27.09.2025",
-        gameUrl: "https://yourusername.github.io/gaderbauer-wedding-game/",
+        gameUrl: "https://nelathan.github.io/gaderbauer-wedding-game/",
       },
       statistics: {
         totalHaikus: getActiveHaikus().length,
@@ -306,7 +306,10 @@ const main = () => {
       },
       haikus: getActiveHaikus(),
     };
-    fs.writeFileSync(path.join(outputDir, "haiku-data.json"), JSON.stringify(jsonData, null, 2));
+    fs.writeFileSync(
+      path.join(outputDir, "haiku-data.json"),
+      JSON.stringify(jsonData, null, 2),
+    );
 
     console.log("✅ Karten erfolgreich generiert!");
     console.log(`📁 Ausgabe in: ${outputDir}`);
@@ -318,8 +321,12 @@ const main = () => {
     console.log("🖨️  Zum Drucken: Öffnet haiku-cards.html im Browser");
     console.log("📱 Für mobile Ansicht: Responsive Design inklusive");
     console.log("");
-    console.log(`🎯 Insgesamt ${getActiveHaikus().length * 3} Karten für ${getActiveHaikus().length * 3} Gäste`);
-    console.log(`✨ ${getActiveHaikus().length} verschiedene Haikus zu entdecken`);
+    console.log(
+      `🎯 Insgesamt ${getActiveHaikus().length * 3} Karten für ${getActiveHaikus().length * 3} Gäste`,
+    );
+    console.log(
+      `✨ ${getActiveHaikus().length} verschiedene Haikus zu entdecken`,
+    );
     console.log(`🏰 Themen aus 14 Jahren Daniel & Astrid Geschichte`);
   } catch (error) {
     console.error("❌ Fehler beim Generieren der Karten:", error);
