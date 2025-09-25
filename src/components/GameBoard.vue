@@ -78,7 +78,7 @@
                 :class="{
                   'error-shake': invalidCodewords.codeword1,
                 }"
-                placeholder="Erstes Codewort"
+                placeholder="🍎 Rotes Codewort"
                 :disabled="timeoutRemaining > 0"
                 maxlength="10"
                 @input="clearFieldError('codeword1')"
@@ -109,7 +109,7 @@
                 :class="{
                   'error-shake': invalidCodewords.codeword2,
                 }"
-                placeholder="Zweites Codewort"
+                placeholder="🍑 Gelbes Codewort"
                 :disabled="timeoutRemaining > 0"
                 maxlength="10"
                 @input="clearFieldError('codeword2')"
@@ -144,7 +144,7 @@
                 :class="{
                   'error-shake': invalidCodewords.codeword3,
                 }"
-                placeholder="Drittes Codewort"
+                placeholder="🫐 Blaues Codewort"
                 :disabled="timeoutRemaining > 0"
                 maxlength="10"
                 @input="clearFieldError('codeword3')"
