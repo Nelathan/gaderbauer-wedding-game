@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { getActiveHaikus } from "../src/data/haikus.js";
+import { getActiveHaikus, validateForGeneration } from "../src/data/haikus.js";
 import fs from "fs";
 import path from "path";
 
@@ -276,6 +276,38 @@ const generateMarkdownList = () => {
 // Main execution
 const main = () => {
   try {
+    // Validate haiku collection before generation
+    console.log("🔍 Validating haiku collection...");
+    const validation = validateForGeneration();
+
+    if (!validation.allValid) {
+      console.error("❌ Validation failed!");
+      console.error(validation.summary);
+      Object.entries(validation.checks).forEach(([key, check]) => {
+        if (!check.valid) {
+          console.error(`   • ${key}: FAILED`);
+          if (check.duplicates?.length > 0) {
+            console.error(
+              `     Duplicates: ${[...new Set(check.duplicates)].join(", ")}`,
+            );
+          }
+          if (check.violations?.length > 0) {
+            console.error(`     Violations: ${check.violations.length} items`);
+          }
+          if (check.actual !== undefined) {
+            console.error(
+              `     Got: ${check.actual}, Expected: ${check.expected}`,
+            );
+          }
+        }
+      });
+      process.exit(1);
+    }
+
+    console.log("✅ Validation passed!");
+    console.log(validation.summary);
+    console.log();
+
     // Create output directory
     const outputDir = path.join(process.cwd(), "cards-output");
     if (!fs.existsSync(outputDir)) {
